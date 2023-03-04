@@ -1,0 +1,173 @@
+@font-face {
+    font-family: 'helvetica_neue25_ultra_light';
+    src: url('../fonts/helveticaneue-ultralight-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'souvenirregular';
+    src: url('../fonts/souvenir/souvenir-webfont.woff2') format('woff2'),
+         url('../fonts/souvenir/souvenir-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html 
+{
+    height: 100%;
+}
+
+body
+{
+    background-image: linear-gradient(180deg, rgba(99, 31, 194, 1) 10%, rgba(57, 6, 122, 1) 46%, rgba(42, 36, 47, 1) 100%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    text-align: center;
+    font-family: 'helvetica_neue25_ultra_light';
+    font-size: 41px;
+    width: 480px; /* bez width i matgin auto mam blok na całą szerokść */
+    margin: auto;
+}
+
+#fast
+{
+    letter-spacing: 8px;
+    font-size: 44px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#kat
+{
+    text-align: center;
+    margin: auto;
+    margin-top: 4.5%;
+    font-family: 'helvetica_neue25_ultra_light';
+    font-size: 40px;
+    border: 2px solid hsl(60, 100%, 43%);
+    border-radius: 27px;
+    width: fit-content;
+    padding: 10px;
+    font-weight: 600;
+    box-shadow: 0px 1px 4px 0px hsl(60, 100%, 43%)
+}
+
+#container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width:fit-content;
+    gap: 20px;
+    margin-top: 3%;
+    font-size: 33px;
+    font-family: 'souvenirregular';
+    color: hsl(60, 100%, 43%);
+}
+
+#back, a
+{
+    border: none;
+    color: hsl(60, 100%, 43%);
+    text-decoration: none;
+    display: inline-block;
+    background-color: inherit;
+    bottom: 0;
+    position: absolute;   /*position absolute tu jest zeby przycisk powrot zawsze byl w odpowienidm miejscu na dole strony*/
+    margin-bottom: 1%;
+    left: 0;
+    width: 100px;
+}
+
+.guziki
+{
+    background: rgb(151,99,219);
+    background: linear-gradient(0deg, rgba(151,99,219,1) 1%, rgba(158,108,219,1) 32%, rgba(178,169,184,1) 100%);
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: 'helvetica_neue25_ultra_light';
+    border-radius: 7px;
+    box-shadow: 0px 1px 4px 0px black;
+    
+}
+
+#timer
+{
+    margin-left: 80%;
+    bottom: 285px;
+    position: relative;   /* musze to zmienic na relative bo powyższe absolute z button mi psuło*/
+    width: 100px;
+    height: 50px;
+    text-align: center;
+
+}
+
+#timer_input
+{
+    width: 60px;
+    height: 60px;
+    margin-left: 81%;
+    bottom: 300px;
+    position: relative;
+    text-align: center;
+    font-size: 26px;
+}
+
+#odp
+{
+    position: relative;
+    bottom: 425px;
+    width: 200px;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#odp_1, #odp_2
+{
+    display: flex;
+    width: fit-content;
+}
+
+#odp_1
+{
+    height: 45px;
+    line-height: 43px;
+    /* transition: transform 0.9s; */
+}
+
+#odp_2
+{
+    opacity: 0;
+    transition: opacity 800ms linear;
+    padding: 10px;
+    color: hsl(60, 100%, 43%);
+    font-family: 'souvenirregular';
+}
+
+button:hover
+{
+    cursor: pointer;
+    box-shadow: 1px 2px 8px 1px black;
+}
+
+/* #odp1:active
+{    not working kurwa
+    transform: rotateX(45deg);
+    -webkit-transform: rotateX(45deg);
+    -ms-transform: rotateX(45deg);
+}
+ */

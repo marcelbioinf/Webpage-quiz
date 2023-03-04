@@ -1,0 +1,202 @@
+@font-face {
+    font-family: 'helvetica_neue25_ultra_light';
+    src: url('../fonts/helveticaneue-ultralight-webfont.woff2') format('woff2'),
+         url('../fonts/helveticaneue-ultralight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'souvenirregular';
+    src: url('../fonts/souvenir/souvenir-webfont.woff2') format('woff2'),
+         url('../fonts/souvenir/souvenir-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body
+{
+    background-color: rgb(57, 6, 122);
+}
+
+h1{
+    text-align: center;
+    font-family: 'helvetica_neue25_ultra_light';
+    font-size: 41px;
+    width: 480px; /* bez width i matgin auto mam blok na całą szerokść */
+    margin: auto;
+}
+
+#fast
+{
+    letter-spacing: 8px;
+    font-size: 44px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+
+
+#grid-container
+{
+    margin-top: 1%;
+    display: grid;
+    /*grid-auto-columns: minmax(0, 1fr);*/
+    /* grid-auto-flow: column; */
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 80vh;
+    justify-content: center;
+}
+
+.boxes
+{
+    display: flex;
+    align-items: center;
+    /*width: 100%;*/
+}
+
+/* #b1, #b4, #b7
+{
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+#b2, #b5, #b8
+{
+    grid-column-start: 4;
+    grid-column-end: 6;
+}
+
+#b3, #b6, #b9
+{
+    grid-column-start: 7;
+    grid-column-end: 9;
+} */
+
+
+.kategoria_dropdown
+{
+    position: relative;
+    height: fit-content; /*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! TYRON ON LATER*/
+    margin: 0 auto;
+    font-family: 'helvetica_neue25_ultra_light';
+    font-size: 1.8rem;
+    font-weight: bold;
+    min-width: 55%;   /* te 2 potrzebne zeby odslaniane pytania mialy odpowiednia szerokosć   */
+    text-align: center;
+}
+
+#b1 .kategoria_dropdown
+{
+    right: 5%;
+    top: 15%;
+}
+
+#b2 .kategoria_dropdown
+{
+    bottom: 15%;
+}
+
+#b3 .kategoria_dropdown
+{
+    top: 15%;
+    left: 5%;
+}
+
+#b6 .kategoria_dropdown
+{
+    left: 15%;
+}
+
+#b4 .kategoria_dropdown
+{
+    right: 15%;
+}
+
+#b8 .kategoria_dropdown
+{
+    top: 20%;
+}
+
+#b7 .kategoria_dropdown, #b9 .kategoria_dropdown
+{
+    bottom: 10%;
+}
+
+.kategoria_dropdown_content
+{
+    position: absolute;
+    background-color: rgb(173, 115, 255);
+    border-radius: .2rem;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, .2);
+    min-width: 100%;
+    height: fit-content;
+    text-align: center;
+    font-size: 1.7rem;
+    top: calc(100% + .05rem);
+    left: 0;
+
+    /*display: none;  with opacity I can animate it nicely*/
+    pointer-events: none;
+    display: block;
+    opacity: 0;
+    transform: translateY(-3px);
+    transition: opacity 550ms ease-in-out, transform 250ms ease-in-out;
+    z-index: 1;
+}
+
+.pytania
+{
+    list-style: none;
+    padding: 3px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+}  
+
+.pytania li
+{
+    margin: 8px 0;
+}
+
+.pytania li:hover
+{
+    background-color: rgb(57, 6, 122);
+}
+
+.pytania a
+{
+    text-decoration: none;
+    color: black;
+}
+
+.pytania a:hover
+{
+    color: hsl(60, 100%, 43%);
+}
+
+.pytania a:visited
+{
+    color: rgba(202, 202, 202, 0.164);
+}
+
+.kategoria_dropdown:hover .kategoria_dropdown_content
+{
+    /*display: block;*/
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.kategoria_dropdown:hover
+{
+    color: hsl(60, 100%, 43%);
+}
+
+#im1
+{
+    margin: auto;
+}
